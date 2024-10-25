@@ -1,0 +1,37 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "C:\\Users\\Caroleen\\source\\repos\\MonitorBattlEye\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{F5FA826F-4A1C-4B6B-A4E7-43145BC21775}|MonitorBattlEye\\MonitorBattlEye.vcxproj|C:\\Users\\Caroleen\\source\\repos\\MonitorBattlEye\\MonitorBattlEye\\DetectBattlEye.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{F5FA826F-4A1C-4B6B-A4E7-43145BC21775}|MonitorBattlEye\\MonitorBattlEye.vcxproj|solutionrelative:MonitorBattlEye\\DetectBattlEye.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 0,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "DetectBattlEye.cpp",
+              "DocumentMoniker": "C:\\Users\\Caroleen\\source\\repos\\MonitorBattlEye\\MonitorBattlEye\\DetectBattlEye.cpp",
+              "RelativeDocumentMoniker": "MonitorBattlEye\\DetectBattlEye.cpp",
+              "ToolTip": "C:\\Users\\Caroleen\\source\\repos\\MonitorBattlEye\\MonitorBattlEye\\DetectBattlEye.cpp",
+              "RelativeToolTip": "MonitorBattlEye\\DetectBattlEye.cpp",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAkAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
+              "WhenOpened": "2024-09-26T03:23:49.404Z",
+              "EditorCaption": ""
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
