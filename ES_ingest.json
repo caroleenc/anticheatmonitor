@@ -1,0 +1,618 @@
+{
+    "description": "Ingest pipeline created by text structure finder",
+    "processors": [
+        {
+            "csv": {
+                "field": "message",
+                "target_fields": [
+                    "Time of Day",
+                    "Process Name",
+                    "PID",
+                    "Operation",
+                    "Path",
+                    "Result",
+                    "Detail"
+                ],
+                "ignore_missing": false
+            }
+        },
+        {
+            "date": {
+                "field": "Time of Day",
+                "timezone": "{{ event.timezone }}",
+                "formats": [
+                    "yyyy-MM-dd h:mm:ss.SSSSSSS a"
+                ],
+                "output_format": "yyyy-MM-dd'T'HH:mm:ss.SSSSSSSSSXXX"
+            }
+        },
+        {
+            "kv": {
+                "field": "Detail",
+                "field_split": ", ",
+                "value_split": ": ",
+                "prefix": "Detail.",
+                "trim_key": " "
+            }
+        },
+        {
+            "mutate": {
+                "rename": {
+                    "Thread ID": "[Detail][Thread ID]"
+                }
+            }
+        },
+        {
+            "mutate": {
+                "rename": {
+                    " Parent PID ": "[Detail][Parent PID]"
+                }
+            }
+        },
+        {
+            "mutate": {
+                "rename": {
+                    " Command line ": "[Detail][Command line]"
+                }
+            }
+        },
+        {
+            "mutate": {
+                "rename": {
+                    " Current directory ": "[Detail][Current directory]"
+                }
+            }
+        },
+        {
+            "mutate": {
+                "rename": {
+                    " Environment ": "[Detail][Environment]"
+                }
+            }
+        },
+        {
+            "mutate": {
+                "rename": {
+                    " C ": "[Detail][C]"
+                }
+            }
+        },
+        {
+            "mutate": {
+                "rename": {
+                    " Thread ID ": "[Detail][Thread ID]"
+                }
+            }
+        },
+        {
+            "mutate": {
+                "rename": {
+                    " Image Base ": "[Detail][Image Base]"
+                }
+            }
+        },
+        {
+            "mutate": {
+                "rename": {
+                    " Image Size ": "[Detail][Image Size]"
+                }
+            }
+        },
+        {
+            "mutate": {
+                "rename": {
+                    " Desired Access ": "[Detail][Desired Access]"
+                }
+            }
+        },
+        {
+            "mutate": {
+                "rename": {
+                    " Disposition ": "[Detail][Disposition]"
+                }
+            }
+        },
+        {
+            "mutate": {
+                "rename": {
+                    " Options ": "[Detail][Options]"
+                }
+            }
+        },
+        {
+            "mutate": {
+                "rename": {
+                    " Attributes ": "[Detail][Attributes]"
+                }
+            }
+        },
+        {
+            "mutate": {
+                "rename": {
+                    " ShareMode ": "[Detail][ShareMode]"
+                }
+            }
+        },
+        {
+            "mutate": {
+                "rename": {
+                    " AllocationSize ": "[Detail][AllocationSize]"
+                }
+            }
+        },
+        {
+            "mutate": {
+                "rename": {
+                    " OpenResult ": "[Detail][OpenResult]"
+                }
+            }
+        },
+        {
+            "mutate": {
+                "rename": {
+                    " EndOfFile ": "[Detail][EndOfFile]"
+                }
+            }
+        },
+        {
+            "mutate": {
+                "rename": {
+                    " NumberOfLinks ": "[Detail][NumberOfLinks]"
+                }
+            }
+        },
+        {
+            "mutate": {
+                "rename": {
+                    " DeletePending ": "[Detail][DeletePending]"
+                }
+            }
+        },
+        {
+            "mutate": {
+                "rename": {
+                    " Directory ": "[Detail][Directory]"
+                }
+            }
+        },
+        {
+            "mutate": {
+                "rename": {
+                    " Offset ": "[Detail][Offset]"
+                }
+            }
+        },
+        {
+            "mutate": {
+                "rename": {
+                    " Length ": "[Detail][Length]"
+                }
+            }
+        },
+        {
+            "mutate": {
+                "rename": {
+                    " Priority ": "[Detail][Priority]"
+                }
+            }
+        },
+        {
+            "mutate": {
+                "rename": {
+                    " Type ": "[Detail][Type]"
+                }
+            }
+        },
+        {
+            "mutate": {
+                "rename": {
+                    " Data ": "[Detail][Data]"
+                }
+            }
+        },
+        {
+            "mutate": {
+                "rename": {
+                    " CreationTime ": "[Detail][CreationTime]"
+                }
+            }
+        },
+        {
+            "mutate": {
+                "rename": {
+                    " LastAccessTime ": "[Detail][LastAccessTime]"
+                }
+            }
+        },
+        {
+            "mutate": {
+                "rename": {
+                    " LastWriteTime ": "[Detail][LastWriteTime]"
+                }
+            }
+        },
+        {
+            "mutate": {
+                "rename": {
+                    " ChangeTime ": "[Detail][ChangeTime]"
+                }
+            }
+        },
+        {
+            "mutate": {
+                "rename": {
+                    " FileAttributes ": "[Detail][FileAttributes]"
+                }
+            }
+        },
+        {
+            "mutate": {
+                "rename": {
+                    " SyncType ": "[Detail][SyncType]"
+                }
+            }
+        },
+        {
+            "mutate": {
+                "rename": {
+                    " PageProtection ": "[Detail][PageProtection]"
+                }
+            }
+        },
+        {
+            "mutate": {
+                "rename": {
+                    " Granted Access ": "[Detail][Granted Access]"
+                }
+            }
+        },
+        {
+            "mutate": {
+                "rename": {
+                    " Query ": "[Detail][Query]"
+                }
+            }
+        },
+        {
+            "mutate": {
+                "rename": {
+                    " HandleTags ": "[Detail][HandleTags]"
+                }
+            }
+        },
+        {
+            "mutate": {
+                "rename": {
+                    " Name ": "[Detail][Name]"
+                }
+            }
+        },
+        {
+            "mutate": {
+                "rename": {
+                    " ReparseTag ": "[Detail][ReparseTag]"
+                }
+            }
+        },
+        {
+            "mutate": {
+                "rename": {
+                    " Flags ": "[Detail][Flags]"
+                }
+            }
+        },
+        {
+            "mutate": {
+                "rename": {
+                    " Index ": "[Detail][Index]"
+                }
+            }
+        },
+        {
+            "mutate": {
+                "rename": {
+                    " SubKeys ": "[Detail][SubKeys]"
+                }
+            }
+        },
+        {
+            "mutate": {
+                "rename": {
+                    " Values ": "[Detail][Values]"
+                }
+            }
+        },
+        {
+            "mutate": {
+                "rename": {
+                    " KeySetInformationClass ": "[Detail][KeySetInformationClass]"
+                }
+            }
+        },
+        {
+            "mutate": {
+                "rename": {
+                    " seqnum ": "[Detail][seqnum]"
+                }
+            }
+        },
+        {
+            "mutate": {
+                "rename": {
+                    " connid ": "[Detail][connid]"
+                }
+            }
+        },
+        {
+            "mutate": {
+                "rename": {
+                    " Information ": "[Detail][Information]"
+                }
+            }
+        },
+        {
+            "mutate": {
+                "rename": {
+                    " FileInformationClass ": "[Detail][FileInformationClass]"
+                }
+            }
+        },
+        {
+            "mutate": {
+                "rename": {
+                    " Filter ": "[Detail][Filter]"
+                }
+            }
+        },
+        {
+            "mutate": {
+                "rename": {
+                    " 2 ": "[Detail][2]"
+                }
+            }
+        },
+        {
+            "mutate": {
+                "rename": {
+                    " 1 ": "[Detail][1]"
+                }
+            }
+        },
+        {
+            "mutate": {
+                "rename": {
+                    " 3 ": "[Detail][3]"
+                }
+            }
+        },
+        {
+            "mutate": {
+                "rename": {
+                    " 4 ": "[Detail][4]"
+                }
+            }
+        },
+        {
+            "mutate": {
+                "rename": {
+                    " VolumeCreationTime ": "[Detail][VolumeCreationTime]"
+                }
+            }
+        },
+        {
+            "mutate": {
+                "rename": {
+                    " VolumeSerialNumber ": "[Detail][VolumeSerialNumber]"
+                }
+            }
+        },
+        {
+            "mutate": {
+                "rename": {
+                    " SupportsObjects ": "[Detail][SupportsObjects]"
+                }
+            }
+        },
+        {
+            "mutate": {
+                "rename": {
+                    " VolumeLabel ": "[Detail][VolumeLabel]"
+                }
+            }
+        },
+        {
+            "mutate": {
+                "rename": {
+                    " User Time ": "[Detail][User Time]"
+                }
+            }
+        },
+        {
+            "mutate": {
+                "rename": {
+                    " Kernel Time ": "[Detail][Kernel Time]"
+                }
+            }
+        },
+        {
+            "mutate": {
+                "rename": {
+                    " Control ": "[Detail][Control]"
+                }
+            }
+        },
+        {
+            "mutate": {
+                "rename": {
+                    " O Flags ": "[Detail][O Flags]"
+                }
+            }
+        },
+        {
+            "mutate": {
+                "rename": {
+                    " Exit Status ": "[Detail][Exit Status]"
+                }
+            }
+        },
+        {
+            "mutate": {
+                "rename": {
+                    " Private Bytes ": "[Detail][Private Bytes]"
+                }
+            }
+        },
+        {
+            "mutate": {
+                "rename": {
+                    " Peak Private Bytes ": "[Detail][Peak Private Bytes]"
+                }
+            }
+        },
+        {
+            "mutate": {
+                "rename": {
+                    " Working Set ": "[Detail][Working Set]"
+                }
+            }
+        },
+        {
+            "mutate": {
+                "rename": {
+                    " Peak Working Set ": "[Detail][Peak Working Set]"
+                }
+            }
+        },
+        {
+            "convert": {
+                "field": "PID",
+                "type": "long",
+                "ignore_missing": true
+            }
+        },
+        {
+            "convert": {
+                "field": "Parent PID",
+                "type": "long",
+                "ignore_missing": true
+            }
+        },
+        {
+            "convert": {
+                "field": "Thread ID",
+                "type": "long",
+                "ignore_missing": true
+            }
+        },
+        {
+            "convert": {
+                "field": "Image Size",
+                "type": "long",
+                "ignore_missing": true
+            }
+        },
+        {
+            "convert": {
+                "field": "Allocation Size",
+                "type": "long",
+                "ignore_missing": true
+            }
+        },
+        {
+            "convert": {
+                "field": "NumberOfLinks",
+                "type": "long",
+                "ignore_missing": true
+            }
+        },
+        {
+            "convert": {
+                "field": "Offset",
+                "type": "long",
+                "ignore_missing": true
+            }
+        },
+        {
+            "convert": {
+                "field": "Length",
+                "type": "long",
+                "ignore_missing": true
+            }
+        },
+        {
+            "convert": {
+                "field": "Index",
+                "type": "long",
+                "ignore_missing": true
+            }
+        },
+        {
+            "convert": {
+                "field": "SubKeys",
+                "type": "long",
+                "ignore_missing": true
+            }
+        },
+        {
+            "convert": {
+                "field": "Values",
+                "type": "long",
+                "ignore_missing": true
+            }
+        },
+        {
+            "convert": {
+                "field": "seqnum",
+                "type": "long",
+                "ignore_missing": true
+            }
+        },
+        {
+            "convert": {
+                "field": "connid",
+                "type": "long",
+                "ignore_missing": true
+            }
+        },
+        {
+            "convert": {
+                "field": "VolumeSerialNumber",
+                "type": "long",
+                "ignore_missing": true
+            }
+        },
+        {
+            "convert": {
+                "field": "Exit Status",
+                "type": "long",
+                "ignore_missing": true
+            }
+        },
+        {
+            "convert": {
+                "field": "Private Bytes",
+                "type": "long",
+                "ignore_missing": true
+            }
+        },
+        {
+            "convert": {
+                "field": "Working Set",
+                "type": "long",
+                "ignore_missing": true
+            }
+        },
+        {
+            "convert": {
+                "field": "Peak Working Set",
+                "type": "long",
+                "ignore_missing": true
+            }
+        },
+        {
+            "remove": {
+                "field": "message"
+            }
+        }
+    ]
+}

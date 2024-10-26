@@ -1,0 +1,238 @@
+{
+    "mappings": {
+  "properties": {
+    "@timestamp": {
+      "type": "date_nanos"
+    },
+    "new_timestamp": {
+        "type": "date",
+        "format": "YYYY-MM-dd h:mm:ss.SSSSSSS a"
+    },
+    "Detail": {
+      "properties": {
+        "Parent PID": {
+          "type": "long"
+        },
+        "Command line": {
+          "type": "text"
+        },
+        "Current directory": {
+          "type": "text"
+        },
+        "Environment": {
+          "type": "text"
+        },
+        "C": {
+          "type": "text"
+        },
+        "Thread ID": {
+          "type": "long"
+        },
+        "Image Base": {
+          "type": "text"
+        },
+        "Image Size": {
+          "type": "text"
+        },
+        "Desired Access": {
+          "type": "text"
+        },
+        "Disposition": {
+          "type": "text"
+        },
+        "Options": {
+          "type": "text"
+        },
+        "Attributes": {
+          "type": "text"
+        },
+        "ShareMode": {
+          "type": "text"
+        },
+        "AllocationSize": {
+          "type": "text"
+        },
+        "OpenResult": {
+          "type": "text"
+        },
+        "EndOfFile": {
+          "type": "text"
+        },
+        "NumberOfLinks": {
+          "type": "long"
+        },
+        "DeletePending": {
+          "type": "text"
+        },
+        "Directory": {
+          "type": "text"
+        },
+        "Offset": {
+          "type": "long"
+        },
+        "Length": {
+          "type": "long"
+        },
+        "Priority": {
+          "type": "text"
+        },
+        "Type": {
+          "type": "text"
+        },
+        "Data": {
+          "type": "text"
+        },
+        "CreationTime": {
+          "type": "date",
+          "format": "M/d/yyyy h:mm:ss a"
+        },
+        "LastAccessTime": {
+          "type": "date",
+          "format": "M/d/yyyy h:mm:ss a"
+        },
+        "LastWriteTime": {
+          "type": "date",
+          "format": "M/d/yyyy h:mm:ss a"
+        },
+        "ChangeTime": {
+          "type": "date",
+          "format": "M/d/yyyy h:mm:ss a"
+        },
+        "FileAttributes": {
+          "type": "text"
+        },
+        "SyncType": {
+          "type": "text"
+        },
+        "PageProtection": {
+          "type": "text"
+        },
+        "Granted Access": {
+          "type": "text"
+        },
+        "Query": {
+          "type": "text"
+        },
+        "HandleTags": {
+          "type": "text"
+        },
+        "Name": {
+          "type": "text"
+        },
+        "ReparseTag": {
+          "type": "text"
+        },
+        "Flags": {
+          "type": "text"
+        },
+        "Index": {
+          "type": "long"
+        },
+        "SubKeys": {
+          "type": "long"
+        },
+        "Values": {
+          "type": "long"
+        },
+        "KeySetInformationClass": {
+          "type": "text"
+        },
+        "seqnum": {
+          "type": "long"
+        },
+        "connid": {
+          "type": "long"
+        },
+        "Information": {
+          "type": "text"
+        },
+        "FileInformationClass": {
+          "type": "text"
+        },
+        "Filter": {
+          "type": "text"
+        },
+        "2": {
+          "type": "text"
+        },
+        "1": {
+          "type": "text"
+        },
+        "3": {
+          "type": "text"
+        },
+        "4": {
+          "type": "text"
+        },
+        "VolumeCreationTime": {
+          "type": "date",
+          "format": "MM/dd/yyyy h:mm:ss a"
+        },
+        "VolumeSerialNumber": {
+          "type": "text"
+        },
+        "SupportsObjects": {
+          "type": "text"
+        },
+        "VolumeLabel": {
+          "type": "text"
+        },
+        "User Time": {
+          "type": "text"
+        },
+        "User Time2": {
+            "type": "text"
+          },
+        "User Time Seconds": {
+          "type": "float"
+        },
+        "User Time Seconds2": {
+            "type": "float"
+          },
+        "Kernel Time": {
+          "type": "text"
+        },
+        "Control": {
+          "type": "text"
+        },
+        "O Flags": {
+          "type": "text"
+        },
+        "Exit Status": {
+          "type": "long"
+        },
+        "Private Bytes": {
+          "type": "long"
+        },
+        "Peak Private Bytes": {
+          "type": "long"
+        },
+        "Working Set": {
+          "type": "long"
+        },
+        "Peak Working Set": {
+          "type": "long"
+        }
+      }
+    },
+    "Operation": {
+      "type": "keyword"
+    },
+    "PID": {
+      "type": "long"
+    },
+    "Path": {
+      "type": "text"
+    },
+    "Process Name": {
+      "type": "keyword"
+    },
+    "Result": {
+      "type": "keyword"
+    },
+    "Time of Day": {
+      "type": "keyword"
+    }
+  }
+}
+}
